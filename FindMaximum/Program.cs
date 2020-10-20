@@ -14,5 +14,10 @@ namespace FindMaximum
         {
             return Math.Max(Math.Max(n1, n2), n3);
         }
+
+        public static float MaxFloat(float n1, float n2, float n3)
+        {
+            return Math.Max(Math.Max(n1, n2), n3);
+        }
     }
 }
