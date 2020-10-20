@@ -9,12 +9,5 @@ namespace FindMaximum
             Console.WriteLine("Find Maximun Program");
             Console.WriteLine("=====================");
         }
-
-        
-        
-        
-
-        
-
     }
 }

@@ -16,7 +16,7 @@ namespace Test_FindMaxProgram
             int expectedMax = 21;
             int actualMax;
             //act
-            actualMax = Comparision.FindMaxInt(n1, n2, n3);
+            actualMax = Comparision.FindMax(n1, n2, n3);
             //Assert
             Assert.AreEqual(expectedMax, actualMax);
         }
@@ -31,7 +31,7 @@ namespace Test_FindMaxProgram
             float expectedMax = 13.2f;
             float actualMax;
             //act
-            actualMax = Comparision.FindMaxFloat(n1, n2, n3);
+            actualMax = Comparision.FindMax(n1, n2, n3);
             //Assert
             Assert.AreEqual(expectedMax, actualMax);
         }
@@ -46,7 +46,7 @@ namespace Test_FindMaxProgram
             string expectedMax = "SarsCov2";
             string actualMax;
             //act
-            actualMax = Comparision.FindMaxString(s1, s2, s3);
+            actualMax = Comparision.FindMax(s1, s2, s3);
             //Assert
             Assert.AreEqual(expectedMax, actualMax);
         }
