@@ -7,31 +7,22 @@ namespace FindMaximum
 {
     public class Comparision<T> where T : IComparable
     {
-        private T v1, v2, v3;
+        private T[] values;
 
-        public Comparision(T v1, T v2, T v3)
+        public Comparision(params T[] values)
         {
-            this.v1 = v1;
-            this.v2 = v2;
-            this.v3 = v3;
+            this.values = values;
         }
 
         public T FindMax()
         {
-            if (v1.CompareTo(v2)>0)
+            T max = values[0];
+            foreach(T value in values)
             {
-                if (v1.CompareTo(v3) > 0)
-                    return v1;
-                else
-                    return v3;
+                if (value.CompareTo(max) > 0)
+                    max = value;
             }
-            else
-            {
-                if (v2.CompareTo(v3) > 0)
-                    return v2;
-                else
-                    return v3;
-            }
+            return max;
         }
     }
 }
