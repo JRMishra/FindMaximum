@@ -13,10 +13,12 @@ namespace Test_FindMaxProgram
         public void MaxIntMethod_ShouldReturnMaxInteger(int n1, int n2, int n3)
         {
             //arrange
+            Comparision<int> compareInt = new Comparision<int>(n1, n2, n3);
             int expectedMax = 21;
-            int actualMax;
+
             //act
-            actualMax = Comparision.FindMax(n1, n2, n3);
+            int actualMax = compareInt.FindMax();
+
             //Assert
             Assert.AreEqual(expectedMax, actualMax);
         }
@@ -25,13 +27,15 @@ namespace Test_FindMaxProgram
         [DataRow(8.5f,13.2f,1.7f)]
         [DataRow(13.2f,8.5f,1.7f)]
         [DataRow(13.2f,1.7f,8.5f)]
-        public void MaxFloatMethod_ShouldReturnMaxFloat(float n1, float n2, float n3)
+        public void MaxFloatMethod_ShouldReturnMaxFloat(float f1, float f2, float f3)
         {
             //arrange
+            Comparision<float> compareFloat = new Comparision<float>(f1, f2, f3);
             float expectedMax = 13.2f;
-            float actualMax;
+
             //act
-            actualMax = Comparision.FindMax(n1, n2, n3);
+            float actualMax = compareFloat.FindMax();
+
             //Assert
             Assert.AreEqual(expectedMax, actualMax);
         }
@@ -43,10 +47,12 @@ namespace Test_FindMaxProgram
         public void MaxStringMethod_ShouldReturnMaxString(string s1, string s2, string s3)
         {
             //arrange
+            Comparision<string> compareString = new Comparision<string>(s1,s2,s3);
             string expectedMax = "SarsCov2";
-            string actualMax;
+            
             //act
-            actualMax = Comparision.FindMax(s1, s2, s3);
+            string actualMax = compareString.FindMax();
+
             //Assert
             Assert.AreEqual(expectedMax, actualMax);
         }

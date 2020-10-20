@@ -5,23 +5,32 @@ using System.Text;
 
 namespace FindMaximum
 {
-    public class Comparision
+    public class Comparision<T> where T : IComparable
     {
-        public static T FindMax<T>(T n1, T n2, T n3) where T : IComparable
+        private T v1, v2, v3;
+
+        public Comparision(T v1, T v2, T v3)
         {
-            if (n1.CompareTo(n2)>0)
+            this.v1 = v1;
+            this.v2 = v2;
+            this.v3 = v3;
+        }
+
+        public T FindMax()
+        {
+            if (v1.CompareTo(v2)>0)
             {
-                if (n1.CompareTo(n3) > 0)
-                    return n1;
+                if (v1.CompareTo(v3) > 0)
+                    return v1;
                 else
-                    return n3;
+                    return v3;
             }
             else
             {
-                if (n2.CompareTo(n3) > 0)
-                    return n2;
+                if (v2.CompareTo(v3) > 0)
+                    return v2;
                 else
-                    return n3;
+                    return v3;
             }
         }
     }
