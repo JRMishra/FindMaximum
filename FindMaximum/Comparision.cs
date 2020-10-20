@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using System.Text;
+using static System.Console;
 
 namespace FindMaximum
 {
@@ -23,6 +23,11 @@ namespace FindMaximum
                     max = value;
             }
             return max;
+        }
+
+        public void PrintMax()
+        {
+            WriteLine(FindMax());
         }
     }
 }
