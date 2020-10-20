@@ -16,7 +16,7 @@ namespace Test_FindMaxProgram
             int expectedMax = 8;
             int actualMax;
             //act
-            actualMax = Program.MaxInt(n1, n2, n3);
+            actualMax = Comparision.FindMaxInt(n1, n2, n3);
             //Assert
             Assert.AreEqual(expectedMax, actualMax);
         }
@@ -31,7 +31,7 @@ namespace Test_FindMaxProgram
             float expectedMax = 8.5f;
             float actualMax;
             //act
-            actualMax = Program.MaxFloat(n1, n2, n3);
+            actualMax = Comparision.FindMaxFloat(n1, n2, n3);
             //Assert
             Assert.AreEqual(expectedMax, actualMax);
         }
