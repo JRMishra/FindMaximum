@@ -7,13 +7,13 @@ namespace Test_FindMaxProgram
     public class UnitTest1
     {
         [TestMethod]
-        [DataRow(8,3,1)]
-        [DataRow(3,8,1)]
-        [DataRow(3,1,8)]
+        [DataRow(8,3,21)]
+        [DataRow(3,8,21)]
+        [DataRow(3,21,8)]
         public void MaxIntMethod_ShouldReturnMaxInteger(int n1, int n2, int n3)
         {
             //arrange
-            int expectedMax = 8;
+            int expectedMax = 21;
             int actualMax;
             //act
             actualMax = Comparision.FindMaxInt(n1, n2, n3);
@@ -22,16 +22,31 @@ namespace Test_FindMaxProgram
         }
 
         [TestMethod]
-        [DataRow(8.5f,3.2f,1.7f)]
-        [DataRow(3.2f,8.5f,1.7f)]
-        [DataRow(3.2f,1.7f,8.5f)]
+        [DataRow(8.5f,13.2f,1.7f)]
+        [DataRow(13.2f,8.5f,1.7f)]
+        [DataRow(13.2f,1.7f,8.5f)]
         public void MaxFloatMethod_ShouldReturnMaxFloat(float n1, float n2, float n3)
         {
             //arrange
-            float expectedMax = 8.5f;
+            float expectedMax = 13.2f;
             float actualMax;
             //act
             actualMax = Comparision.FindMaxFloat(n1, n2, n3);
+            //Assert
+            Assert.AreEqual(expectedMax, actualMax);
+        }
+
+        [TestMethod]
+        [DataRow("Corona", "Covid", "SarsCov2")]
+        [DataRow("SarsCov2", "Covid", "Corona" )]
+        [DataRow("Covid", "SarsCov2", "Corona")]
+        public void MaxStringMethod_ShouldReturnMaxString(string s1, string s2, string s3)
+        {
+            //arrange
+            string expectedMax = "SarsCov2";
+            string actualMax;
+            //act
+            actualMax = Comparision.FindMaxString(s1, s2, s3);
             //Assert
             Assert.AreEqual(expectedMax, actualMax);
         }
